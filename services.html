@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Услуги и цены — клининговая компания чисто.ру">
+  <title>Услуги и цены — чисто.ру</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top header">
+    <div class="container"><a class="navbar-brand brand" href="index.html">чисто.ру</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link header__link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="services.html" aria-current="page">Услуги и
+              цены</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="about.html">О компании</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <div class="header__call"><a href="tel:+74951234567">+7 (495) 123-45-67</a><small>Ежедневно, 8:00–22:00</small>
+        </div><button class="btn button--dark header__order" data-bs-toggle="modal"
+          data-bs-target="#orderModal">Заказать уборку</button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="section section--padded services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">Наши услуги</span>
+            <h2>Выберите свою<br><em>чистоту</em></h2>
+          </div>
+          <p>Подберём формат под ваш дом, график и задачу. Стоимость фиксируем до начала работ.</p>
+        </div>
+        <div class="service-filters" role="group" aria-label="Фильтр услуг"><button
+            class="service-filters__button service-filters__button--active" data-filter="all">Все услуги</button><button
+            class="service-filters__button" data-filter="home">Для дома</button><button class="service-filters__button"
+            data-filter="office">Для офиса</button><button class="service-filters__button" data-filter="special">Особый
+            случай</button></div>
+        <div class="row g-4" id="serviceGrid">
+          <div class="col-md-6 col-lg-4 services__item" data-category="home">
+            <article class="service-card">
+              <div class="service-card__photo service-card__photo--bathroom"><span>01 / каждый день</span></div>
+              <div class="service-card__body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h3>Поддерживающая</h3><span class="service-card__arrow">↗</span>
+                </div>
+                <p>Лёгкая уборка, чтобы дома всегда было приятно.</p>
+                <ul>
+                  <li>Пыль и поверхности</li>
+                  <li>Кухня и санузел</li>
+                  <li>Полы и зеркала</li>
+                </ul>
+                <div class="service-card__price-row"><span>от <b>2 900 ₽</b></span><button
+                    class="text-link service-card__order" data-service="Поддерживающая уборка">Заказать →</button></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 services__item" id="deep-cleaning" data-category="home">
+            <article class="service-card">
+              <div class="service-card__photo service-card__photo--living-room"><span>02 / обновление</span></div>
+              <div class="service-card__body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h3>Генеральная</h3><span class="service-card__arrow">↗</span>
+                </div>
+                <p>Тщательно очищаем каждый угол и труднодоступное место.</p>
+                <ul>
+                  <li>Всё из поддерживающей</li>
+                  <li>Плинтусы и двери</li>
+                  <li>Фасады и бытовая техника</li>
+                </ul>
+                <div class="service-card__price-row"><span>от <b>6 900 ₽</b></span><button
+                    class="text-link service-card__order" data-service="Генеральная уборка">Заказать →</button></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 services__item" id="post-renovation-cleaning" data-category="special">
+            <article class="service-card">
+              <div class="service-card__photo service-card__photo--renovation"><span>03 / новый этап</span></div>
+              <div class="service-card__body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h3>После ремонта</h3><span class="service-card__arrow">↗</span>
+                </div>
+                <p>Уберём строительную пыль и подготовим пространство к жизни.</p>
+                <ul>
+                  <li>Удаление пыли и следов</li>
+                  <li>Окна и поверхности</li>
+                  <li>Детальная уборка пола</li>
+                </ul>
+                <div class="service-card__price-row"><span>от <b>9 900 ₽</b></span><button
+                    class="text-link service-card__order" data-service="Уборка после ремонта">Заказать →</button></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 services__item" data-category="home">
+            <article class="service-card">
+              <div class="service-card__photo service-card__photo--house"><span>04 / переезд</span></div>
+              <div class="service-card__body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h3>Уборка дома</h3><span class="service-card__arrow">↗</span>
+                </div>
+                <p>Комплексный уход за домами и большими пространствами.</p>
+                <ul>
+                  <li>Комнаты и общие зоны</li>
+                  <li>Кухня, санузлы, лестницы</li>
+                  <li>Пыль, полы и зеркала</li>
+                </ul>
+                <div class="service-card__price-row"><span>от <b>7 900 ₽</b></span><button
+                    class="text-link service-card__order" data-service="Уборка дома">Заказать →</button></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 services__item" data-category="office">
+            <article class="service-card">
+              <div class="service-card__photo service-card__photo--office"><span>05 / для команды</span></div>
+              <div class="service-card__body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h3>Уборка офиса</h3><span class="service-card__arrow">↗</span>
+                </div>
+                <p>Поддерживаем порядок и рабочую атмосферу каждый день.</p>
+                <ul>
+                  <li>Рабочие места и переговорные</li>
+                  <li>Кухня и санузел</li>
+                  <li>Вынос мусора и полы</li>
+                </ul>
+                <div class="service-card__price-row"><span>от <b>4 900 ₽</b></span><button
+                    class="text-link service-card__order" data-service="Уборка офиса">Заказать →</button></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 services__item" id="apartment-cleaning" data-category="home">
+            <article class="service-card">
+              <div class="service-card__photo service-card__photo--apartment"><span>06 / быстро и легко</span></div>
+              <div class="service-card__body">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h3>Уборка квартиры</h3><span class="service-card__arrow">↗</span>
+                </div>
+                <p>Наведём порядок и вернём ощущение лёгкости.</p>
+                <ul>
+                  <li>Комнаты и кухня</li>
+                  <li>Ванная и туалет</li>
+                  <li>Пылесос и влажная уборка</li>
+                </ul>
+                <div class="service-card__price-row"><span>от <b>3 500 ₽</b></span><button
+                    class="text-link service-card__order" data-service="Уборка квартиры">Заказать →</button></div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="services__note">* Итоговая стоимость зависит от площади и состояния помещения. Точную цену уточнит
+          менеджер.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3"><a
+        class="navbar-brand brand" href="index.html">чисто.ру</a><small>© 2026 «чисто.ру». Чистота с заботой.</small>
+      <div><a href="services.html">Услуги</a><a href="about.html">О компании</a><a href="contacts.html">Контакты</a>
+      </div>
+    </div>
+  </footer>
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content order-modal">
+        <div class="modal-header">
+          <div><span class="eyebrow">Это займёт минуту</span>
+            <h2 class="modal-title" id="orderTitle">Заказать <em>уборку</em></h2>
+          </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form id="orderForm">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-12"><label class="form-label" for="orderName">Ваше имя</label><input class="form-control"
+                  id="orderName" name="name" placeholder="Как к вам обращаться?" required></div>
+              <div class="col-12"><label class="form-label" for="orderPhone">Телефон</label><input class="form-control"
+                  id="orderPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required></div>
+              <div class="col-md-7"><label class="form-label" for="orderService">Вид уборки</label><select
+                  class="form-select" id="orderService" name="service" required>
+                  <option value="" selected disabled>Выберите услугу</option>
+                  <option>Уборка квартиры</option>
+                  <option>Уборка дома</option>
+                  <option>Уборка офиса</option>
+                  <option>Генеральная уборка</option>
+                  <option>Уборка после ремонта</option>
+                  <option>Поддерживающая уборка</option>
+                </select></div>
+              <div class="col-md-5"><label class="form-label" for="orderArea">Площадь, м²</label><input
+                  class="form-control" id="orderArea" name="area" type="number" min="1" placeholder="Например, 60"
+                  required></div>
+              <div class="col-12"><label class="form-label" for="orderDate">Желаемая дата</label><input
+                  class="form-control" id="orderDate" name="date" type="date" required></div>
+            </div>
+            <div class="form__success mt-3" role="status" hidden>Поля заполнены. В демонстрационном режиме данные не отправляются.</div>
+          </div>
+          <div class="modal-footer"><button class="btn button--accent w-100" type="submit">Проверить заявку
+              <span>↗</span></button><small>Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
