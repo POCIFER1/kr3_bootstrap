@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Контакты — клининговая компания чисто.ру">
-    <title>Контакты — чисто.ру</title>
+    <meta name="description" content="Контакты — клининговая компания Чистый лад">
+    <title>Контакты — Чистый лад</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
@@ -14,9 +14,9 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
     <nav class="navbar navbar-expand-lg sticky-top header">
-        <div class="container"><a class="navbar-brand brand" href="index.html">чисто.ру</a><button class="navbar-toggler" type="button"
+        <div class="container"><a class="navbar-brand brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a><button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Открыть меню"><span
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="mainNav">
@@ -34,6 +34,12 @@
         </div>
     </nav>
     <main>
+    <nav class="container page-breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+      </ol>
+    </nav>
         <section class="contacts section--padded" id="contacts">
             <div class="container">
                 <div class="contacts__layout">
@@ -46,6 +52,7 @@
                                 href="mailto:hello@chisto.ru">hello@chisto.ru</a></div>
                         <div class="contacts__detail"><small>Работаем ежедневно</small><strong>8:00–22:00 · Москва и
                                 область</strong></div>
+                        <div class="contacts__detail"><small>Социальные сети</small><div class="mt-1"><a class="social-label" href="https://t.me/chistylad_clean" aria-label="Telegram">TG</a> <a class="social-label" href="https://vk.com/chistylad_clean" aria-label="ВКонтакте">VK</a> <a class="social-label" href="https://max.ru/channel_chistylad_clean" aria-label="MAX">MAX</a></div><small class="mt-1">@chistylad_clean</small></div>
                     </div>
                     <form class="contact-form" id="contactForm">
                         <h3>Оставить заявку</h3>
@@ -61,14 +68,122 @@
                 </div>
             </div>
         </section>
+        <section class="section--padded" aria-labelledby="contactFaqTitle">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 id="contactFaqTitle">Частые вопросы</h2>
+                </div>
+                <div class="accordion contacts__faq" id="contactFaq">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-weekends" aria-expanded="false" aria-controls="faq-weekends">
+                                Можно заказать уборку в выходные?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="faq-weekends" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">Да, работаем ежедневно с 8:00 до 22:00. Время визита согласуем при заказе.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-area" aria-expanded="false" aria-controls="faq-area">
+                                Куда вы выезжаете?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="faq-area" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">Работаем в Москве и Московской области. Возможность выезда по конкретному адресу можно уточнить по телефону.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-equipment" aria-expanded="false" aria-controls="faq-equipment">
+                                Нужно подготовить средства и инвентарь?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="faq-equipment" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">Мы привозим свои средства и инвентарь. Средства подбираем с учётом материалов поверхностей и ваших пожеланий.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-price" aria-expanded="false" aria-controls="faq-price">
+                                Как узнать окончательную стоимость?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="faq-price" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">Цена зависит от вида уборки, площади и состояния помещения. Начальные цены указаны на <a href="services.html">странице услуг</a>, а окончательную стоимость согласуем до визита.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-booking" aria-expanded="false" aria-controls="faq-booking">
+                                Что подготовить перед заказом?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="faq-booking" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">Укажите вид уборки, примерную площадь помещения и желаемую дату. Если есть особые пожелания по уборке, сообщите о них при согласовании заказа.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-scope" aria-expanded="false" aria-controls="faq-scope">
+                                Где посмотреть, что входит в уборку?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="faq-scope" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">На <a href="services.html">странице «Услуги и цены»</a> есть список работ для каждого вида уборки. Если нужна дополнительная работа, обсудите её при заказе.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-quality" aria-expanded="false" aria-controls="faq-quality">
+                                Что делать, если после уборки остались замечания?
+                            </button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="faq-quality" data-bs-parent="#contactFaq">
+                            <div class="accordion-body">После уборки мы вместе осматриваем помещение. Если заметите, что что-то пропустили, скажите об этом при осмотре, и мы исправим.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3"><a
-                class="navbar-brand brand" href="index.html">чисто.ру</a><small>© 2026 «чисто.ру». Чистота с заботой.</small>
-            <div><a href="services.html">Услуги</a><a href="about.html">О компании</a><a
-                    href="contacts.html">Контакты</a></div>
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-4">
+            <a class="navbar-brand brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a>
+            <small class="footer__slogan">Пусть дома будет свежо.</small>
+          </div>
+          <div class="col-md-4 text-md-center">
+            <nav class="d-flex flex-wrap gap-3 align-items-center justify-content-md-center footer__heading" aria-label="Навигация в подвале">
+              <a href="index.html">Главная</a><a href="services.html">Услуги и цены</a><a href="about.html">О компании</a>
+            </nav>
+          </div>
+          <div class="col-md-4 d-md-flex justify-content-md-end">
+            <div class="text-start">
+              <div class="d-flex align-items-center gap-2 footer__heading">
+                <a class="fw-bold" href="contacts.html">Контакты</a>
+              </div>
+              <a class="d-block" href="tel:+74951234567"><span class="footer__contact-icon" aria-hidden="true">☎︎</span> +7 (495) 123-45-67</a>
+              <a class="d-block" href="mailto:hello@chisto.ru"><span class="footer__contact-icon" aria-hidden="true">✉︎</span> hello@chisto.ru</a>
+              <div><span class="footer__contact-icon" aria-hidden="true">◷</span> Ежедневно, 8:00 - 22:00</div>
+              <div class="mt-2"><a class="social-label" href="https://t.me/chistylad_clean" aria-label="Telegram">TG</a> <a class="social-label" href="https://vk.com/chistylad_clean" aria-label="ВКонтакте">VK</a> <a class="social-label" href="https://max.ru/channel_chistylad_clean" aria-label="MAX">MAX</a></div>
+              <small class="d-block mt-1">@chistylad_clean</small>
+            </div>
+          </div>
         </div>
+        <p class="footer__copyright text-center mt-4 pt-3 mb-0 border-top"><small>© 2026 Чистый лад. Все права защищены.</small></p>
+      </div>
     </footer>
+    <a class="back-to-top" hidden href="#top" aria-label="Наверх" title="Наверх"><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
     <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content order-modal">

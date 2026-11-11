@@ -31,3 +31,15 @@ function handleDemoForm(form) {
 }
 
 document.querySelectorAll('#orderForm, #contactForm').forEach(handleDemoForm);
+
+const backToTop = document.querySelector('.back-to-top');
+
+function updateBackToTop() {
+  backToTop.hidden = window.scrollY < 320;
+}
+
+if (backToTop) {
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  window.addEventListener('pageshow', updateBackToTop);
+  updateBackToTop();
+}
