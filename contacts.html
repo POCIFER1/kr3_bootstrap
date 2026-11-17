@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Контакты — клининговая компания Чистый лад">
     <title>Контакты — Чистый лад</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -15,25 +16,31 @@
 </head>
 
 <body id="top">
-    <nav class="navbar navbar-expand-lg sticky-top header">
-        <div class="container"><a class="navbar-brand brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a><button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Открыть меню"><span
+  <a class="skip-link visually-hidden-focusable" href="#mainContent">К основному содержанию</a>
+    <nav class="navbar navbar-expand-xl sticky-top header">
+        <div class="container"><a class="navbar-brand brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a>
+        <button class="theme-toggle ms-auto me-2 ms-xl-3 me-xl-0 order-xl-last" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему">
+        <span class="theme-toggle__moon" aria-hidden="true">☾</span><span class="theme-toggle__sun" aria-hidden="true">☀︎</span>
+      </button>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Главное меню"><span
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link header__link" href="index.html">Главная</a></li>
                     <li class="nav-item"><a class="nav-link header__link" href="services.html">Услуги и цены</a></li>
                     <li class="nav-item"><a class="nav-link header__link" href="about.html">О компании</a></li>
-                    <li class="nav-item"><a class="nav-link header__link" href="contacts.html"
+                    <li class="nav-item"><a class="nav-link header__link" href="works.html">Наши работы</a></li>
+                <li class="nav-item"><a class="nav-link header__link" href="contacts.html"
                             aria-current="page">Контакты</a></li>
-                </ul>
+        </ul>
                 <div class="header__call"><a href="tel:+74951234567">+7 (495) 123-45-67</a><small>Ежедневно,
                         8:00–22:00</small></div><button class="btn button--dark header__order"
                     data-bs-toggle="modal" data-bs-target="#orderModal">Заказать уборку</button>
             </div>
         </div>
     </nav>
-    <main>
+    <main id="mainContent" tabindex="-1">
     <nav class="container page-breadcrumbs" aria-label="Хлебные крошки">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
@@ -44,7 +51,7 @@
             <div class="container">
                 <div class="contacts__layout">
                     <div class="contacts__info"><span class="eyebrow">Мы рядом</span>
-                        <h2>Давайте<br><em>обсудим</em></h2>
+                        <h1>Давайте<br><em>обсудим</em></h1>
                         <p>Расскажите, что нужно убрать — мы подскажем лучший вариант и рассчитаем стоимость.</p>
                         <div class="contacts__detail"><small>Позвоните нам</small><a href="tel:+74951234567">+7 (495)
                                 123-45-67</a></div>
@@ -57,8 +64,8 @@
                     <form class="contact-form" id="contactForm">
                         <h3>Оставить заявку</h3>
                         <p>Демонстрационная форма обратной связи.</p><label for="contactName">Как к вам обращаться?</label><input
-                            class="form-control" id="contactName" name="name" placeholder="Ваше имя" required><label
-                            for="contactPhone">Номер телефона</label><input class="form-control" id="contactPhone"
+                            class="form-control" id="contactName" autocomplete="name" name="name" placeholder="Ваше имя" required><label
+                            for="contactPhone">Номер телефона</label><input class="form-control" id="contactPhone" autocomplete="tel"
                             name="phone" type="tel" placeholder="+7 (___) ___-__-__" required><button
                             class="btn button--accent w-100" type="submit">Проверить заявку <span aria-hidden="true">↗</span></button><small
                             class="contact-form__privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных
@@ -164,7 +171,7 @@
           </div>
           <div class="col-md-4 text-md-center">
             <nav class="d-flex flex-wrap gap-3 align-items-center justify-content-md-center footer__heading" aria-label="Навигация в подвале">
-              <a href="index.html">Главная</a><a href="services.html">Услуги и цены</a><a href="about.html">О компании</a>
+              <a href="index.html">Главная</a><a href="services.html">Услуги и цены</a><a href="about.html">О компании</a><a href="works.html">Наши работы</a>
             </nav>
           </div>
           <div class="col-md-4 d-md-flex justify-content-md-end">
@@ -185,7 +192,7 @@
     </footer>
     <a class="back-to-top" hidden href="#top" aria-label="Наверх" title="Наверх"><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
     <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content order-modal">
                 <div class="modal-header">
                     <div><span class="eyebrow">Это займёт минуту</span>
@@ -196,10 +203,10 @@
                     <div class="modal-body">
                         <div class="row g-3">
                             <div class="col-12"><label class="form-label" for="orderName">Ваше имя</label><input
-                                    class="form-control" id="orderName" name="name" placeholder="Как к вам обращаться?"
+                                    class="form-control" id="orderName" autocomplete="name" name="name" placeholder="Как к вам обращаться?"
                                     required></div>
                             <div class="col-12"><label class="form-label" for="orderPhone">Телефон</label><input
-                                    class="form-control" id="orderPhone" name="phone" type="tel"
+                                    class="form-control" id="orderPhone" autocomplete="tel" name="phone" type="tel"
                                     placeholder="+7 (___) ___-__-__" required></div>
                             <div class="col-md-7"><label class="form-label" for="orderService">Вид уборки</label><select
                                     class="form-select" id="orderService" name="service" required>
@@ -210,7 +217,9 @@
                                     <option>Генеральная уборка</option>
                                     <option>Уборка после ремонта</option>
                                     <option>Поддерживающая уборка</option>
-                                </select></div>
+                  <option>Уборка перед переездом</option>
+                  <option>Уборка коммерческих помещений</option>
+                </select></div>
                             <div class="col-md-5"><label class="form-label" for="orderArea">Площадь, м²</label><input
                                     class="form-control" id="orderArea" name="area" type="number" min="1"
                                     placeholder="Например, 60" required></div>

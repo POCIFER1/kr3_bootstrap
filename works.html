@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Примеры уборки до и после">
+  <title>Наши работы — Чистый лад</title>
+  <script src="theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body id="top">
+  <a class="skip-link visually-hidden-focusable" href="#mainContent">К основному содержанию</a>
+  <nav class="navbar navbar-expand-xl sticky-top header">
+    <div class="container"><a class="navbar-brand brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a>
+    <button class="theme-toggle ms-auto me-2 ms-xl-3 me-xl-0 order-xl-last" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему">
+        <span class="theme-toggle__moon" aria-hidden="true">☾</span><span class="theme-toggle__sun" aria-hidden="true">☀︎</span>
+      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Главное меню"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link header__link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="services.html">Услуги и
+              цены</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="about.html">О компании</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="works.html" aria-current="page">Наши работы</a></li>
+        <li class="nav-item"><a class="nav-link header__link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <div class="header__call"><a href="tel:+74951234567">+7 (495) 123-45-67</a><small>Ежедневно, 8:00–22:00</small>
+        </div><button class="btn button--dark header__order" data-bs-toggle="modal"
+          data-bs-target="#orderModal">Заказать уборку</button>
+      </div>
+    </div>
+  </nav>
+  <main id="mainContent" tabindex="-1">
+    <nav class="container page-breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Наши работы</li>
+      </ol>
+    </nav>
+    <section class="section--padded section--compact" aria-labelledby="worksTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h1 id="worksTitle">Наши <em>работы</em></h1>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4">
+            <article class="service-card h-100">
+              <img class="img-fluid w-100" src="works-bathroom.jpg" width="1536" height="1024" loading="lazy" alt="Чистая ванная с прозрачной душевой перегородкой и бежевой плиткой">
+              <div class="service-card__body">
+                <h2 class="h5">Генеральная уборка ванной</h2>
+                <p class="mb-0">Очистка плитки, сантехники, зеркала и душевой перегородки.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="service-card h-100">
+              <img class="img-fluid w-100" src="works-office.jpg" width="1536" height="1024" loading="lazy" alt="Чистая переговорная со стеклянными перегородками">
+              <div class="service-card__body">
+                <h2 class="h5">Уборка офиса</h2>
+                <p class="mb-0">Уборка пола, стола и стеклянных перегородок в переговорной.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="service-card h-100">
+              <img class="img-fluid w-100" src="works-renovation.jpg" width="1536" height="1024" loading="lazy" alt="Пустая светлая комната с чистым деревянным полом">
+              <div class="service-card__body">
+                <h2 class="h5">Уборка после ремонта</h2>
+                <p class="mb-0">Удаление строительной пыли с пола, плинтусов и подоконников.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="service-card h-100">
+              <img class="img-fluid w-100" src="works-bedroom.jpg" width="1536" height="1024" loading="lazy" alt="Убранная светлая спальня с аккуратно застеленной кроватью">
+              <div class="service-card__body">
+                <h2 class="h5">Уборка спальни</h2>
+                <p class="mb-0">Удаление пыли с поверхностей, уборка пола и наведение порядка.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="service-card h-100">
+              <img class="img-fluid w-100" src="works-hallway.jpg" width="1536" height="1024" loading="lazy" alt="Чистая прихожая с зеркалом, скамьёй и деревянными шкафами">
+              <div class="service-card__body">
+                <h2 class="h5">Уборка прихожей</h2>
+                <p class="mb-0">Очистка входной зоны, зеркала, мебельных фасадов и пола.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="service-card h-100">
+              <img class="img-fluid w-100" src="works-kitchen.jpg" width="1536" height="1024" loading="lazy" alt="Чистая кухня со светлыми фасадами и варочной панелью">
+              <div class="service-card__body">
+                <h2 class="h5">Генеральная уборка кухни</h2>
+                <p class="mb-0">Очистка плиты, раковины, столешницы и кухонных фасадов.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="services__note mb-0">Изображения в подборке созданы с помощью ИИ.</p>
+        <a class="btn button--accent mt-4" href="services.html#calculator">Рассчитать стоимость</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-4">
+          <a class="navbar-brand brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a>
+          <small class="footer__slogan">Пусть дома будет свежо.</small>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <nav class="d-flex flex-wrap gap-3 align-items-center justify-content-md-center footer__heading" aria-label="Навигация в подвале">
+            <a href="index.html">Главная</a><a href="services.html">Услуги и цены</a><a href="about.html">О компании</a><a href="works.html">Наши работы</a>
+          </nav>
+        </div>
+        <div class="col-md-4 d-md-flex justify-content-md-end">
+          <div class="text-start">
+            <div class="d-flex align-items-center gap-2 footer__heading">
+              <a class="fw-bold" href="contacts.html">Контакты</a>
+            </div>
+            <a class="d-block" href="tel:+74951234567"><span class="footer__contact-icon" aria-hidden="true">☎︎</span> +7 (495) 123-45-67</a>
+            <a class="d-block" href="mailto:hello@chisto.ru"><span class="footer__contact-icon" aria-hidden="true">✉︎</span> hello@chisto.ru</a>
+            <div><span class="footer__contact-icon" aria-hidden="true">◷</span> Ежедневно, 8:00 - 22:00</div>
+            <div class="mt-2"><a class="social-label" href="https://t.me/chistylad_clean" aria-label="Telegram">TG</a> <a class="social-label" href="https://vk.com/chistylad_clean" aria-label="ВКонтакте">VK</a> <a class="social-label" href="https://max.ru/channel_chistylad_clean" aria-label="MAX">MAX</a></div>
+            <small class="d-block mt-1">@chistylad_clean</small>
+          </div>
+        </div>
+      </div>
+      <p class="footer__copyright text-center mt-4 pt-3 mb-0 border-top"><small>© 2026 Чистый лад. Все права защищены.</small></p>
+    </div>
+  </footer>
+  <a class="back-to-top" hidden href="#top" aria-label="Наверх" title="Наверх"><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content order-modal">
+        <div class="modal-header">
+          <div><span class="eyebrow">Это займёт минуту</span>
+            <h2 class="modal-title" id="orderTitle">Заказать <em>уборку</em></h2>
+          </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form id="orderForm">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-12"><label class="form-label" for="orderName">Ваше имя</label><input class="form-control"
+                  id="orderName" autocomplete="name" name="name" placeholder="Как к вам обращаться?" required></div>
+              <div class="col-12"><label class="form-label" for="orderPhone">Телефон</label><input class="form-control"
+                  id="orderPhone" autocomplete="tel" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required></div>
+              <div class="col-md-7"><label class="form-label" for="orderService">Вид уборки</label><select
+                  class="form-select" id="orderService" name="service" required>
+                  <option value="" selected disabled>Выберите услугу</option>
+                  <option>Уборка квартиры</option>
+                  <option>Уборка дома</option>
+                  <option>Уборка офиса</option>
+                  <option>Генеральная уборка</option>
+                  <option>Уборка после ремонта</option>
+                  <option>Поддерживающая уборка</option>
+                  <option>Уборка перед переездом</option>
+                  <option>Уборка коммерческих помещений</option>
+                </select></div>
+              <div class="col-md-5"><label class="form-label" for="orderArea">Площадь, м²</label><input
+                  class="form-control" id="orderArea" name="area" type="number" min="1" placeholder="Например, 60"
+                  required></div>
+              <div class="col-12"><label class="form-label" for="orderDate">Желаемая дата</label><input
+                  class="form-control" id="orderDate" name="date" type="date" required></div>
+            </div>
+            <div class="form__success mt-3" role="status" hidden>Поля заполнены. В демонстрационном режиме данные не отправляются.</div>
+          </div>
+          <div class="modal-footer"><button class="btn button--accent w-100" type="submit">Проверить заявку
+              <span>↗</span></button><small>Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
