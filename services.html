@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Услуги и цены — клининговая компания Чистый лад">
   <title>Услуги и цены — Чистый лад</title>
+  <script src="theme.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,16 +15,22 @@
 </head>
 
 <body id="top">
-  <nav class="navbar navbar-expand-lg sticky-top header">
-    <div class="container"><a class="navbar-brand brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#mainNav" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+  <a class="skip-link visually-hidden-focusable" href="#mainContent">К основному содержанию</a>
+  <nav class="navbar navbar-expand-xl sticky-top header">
+    <div class="container"><a class="navbar-brand brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a>
+    <button class="theme-toggle ms-auto me-2 ms-xl-3 me-xl-0 order-xl-last" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему">
+        <span class="theme-toggle__moon" aria-hidden="true">☾</span><span class="theme-toggle__sun" aria-hidden="true">☀︎</span>
+      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Главное меню"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link header__link" href="index.html">Главная</a></li>
           <li class="nav-item"><a class="nav-link header__link" href="services.html" aria-current="page">Услуги и
               цены</a></li>
           <li class="nav-item"><a class="nav-link header__link" href="about.html">О компании</a></li>
-          <li class="nav-item"><a class="nav-link header__link" href="contacts.html">Контакты</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="works.html">Наши работы</a></li>
+        <li class="nav-item"><a class="nav-link header__link" href="contacts.html">Контакты</a></li>
         </ul>
         <div class="header__call"><a href="tel:+74951234567">+7 (495) 123-45-67</a><small>Ежедневно, 8:00–22:00</small>
         </div><button class="btn button--dark header__order" data-bs-toggle="modal"
@@ -31,29 +38,32 @@
       </div>
     </div>
   </nav>
-  <main>
+  <main id="mainContent" tabindex="-1">
     <nav class="container page-breadcrumbs" aria-label="Хлебные крошки">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
         <li class="breadcrumb-item active" aria-current="page">Услуги и цены</li>
       </ol>
     </nav>
-    <section class="section section--padded services" id="services">
+    <section class="section section--padded section--compact services" id="services">
       <div class="container">
         <div class="section-heading">
-          <div><span class="eyebrow">Наши услуги</span>
-            <h2>Выберите свою<br><em>чистоту</em></h2>
-          </div>
-          <p>Подберём формат под ваш дом, график и задачу. Стоимость фиксируем до начала работ.</p>
+          <h1>Услуги и <em>цены</em></h1>
+          <p>Подберём уборку для дома или офиса. Стоимость согласуем до начала работ.</p>
         </div>
-        <div class="service-filters" role="group" aria-label="Фильтр услуг"><button
-            class="service-filters__button service-filters__button--active" data-filter="all">Все услуги</button><button
-            class="service-filters__button" data-filter="home">Для дома</button><button class="service-filters__button"
-            data-filter="office">Для офиса</button><button class="service-filters__button" data-filter="special">Особый
-            случай</button></div>
-        <div class="row g-4" id="serviceGrid">
-          <div class="col-md-6 col-lg-4 services__item" data-category="home">
-            <article class="service-card">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+          <div class="service-filters mb-0" role="group" aria-label="Фильтр услуг">
+            <button type="button" class="service-filters__button service-filters__button--active" data-filter="all" aria-controls="serviceGrid" aria-pressed="true">Все услуги</button>
+            <button type="button" class="service-filters__button" data-filter="home" aria-controls="serviceGrid" aria-pressed="false">Для дома</button>
+            <button type="button" class="service-filters__button" data-filter="office" aria-controls="serviceGrid" aria-pressed="false">Для офиса</button>
+            <button type="button" class="service-filters__button" data-filter="special" aria-controls="serviceGrid" aria-pressed="false">Особый случай</button>
+          </div>
+          <div class="d-flex flex-wrap gap-2"><a class="btn button--outline-dark" href="#serviceComparison">Сравнить уборки</a><a class="btn button--outline-dark" href="#calculator">Рассчитать стоимость</a></div>
+        </div>
+        <p id="serviceCount" class="services__note mt-0 mb-3" role="status">Найдено услуг: 8</p>
+        <div class="row g-3" id="serviceGrid">
+          <div class="col-md-6 col-lg-4 col-xl-3 services__item" data-category="home">
+            <article class="service-card position-relative">
               <div class="service-card__photo service-card__photo--bathroom"><span>01 / каждый день</span></div>
               <div class="service-card__body">
                 <div class="d-flex justify-content-between align-items-start">
@@ -65,13 +75,13 @@
                   <li>Кухня и санузел</li>
                   <li>Полы и зеркала</li>
                 </ul>
-                <div class="service-card__price-row"><span>от <b>2 900 ₽</b></span><button
-                    class="text-link service-card__order" data-service="Поддерживающая уборка">Заказать →</button></div>
+                <div class="service-card__price-row"><span>от <b>2 900 ₽</b></span><button class="text-link stretched-link" type="button" data-bs-toggle="modal" data-bs-target="#serviceDetails" aria-label="Подробнее: Поддерживающая уборка" data-description="Подходит для регулярной уборки, когда нужно убрать бытовую пыль и освежить кухню и санузел. Если на поверхностях накопились стойкие загрязнения, обсудите генеральную уборку.">Подробнее →</button><button
+                    class="text-link service-card__order position-relative z-1" data-service="Поддерживающая уборка">Заказать →</button></div>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-lg-4 services__item" id="deep-cleaning" data-category="home">
-            <article class="service-card">
+          <div class="col-md-6 col-lg-4 col-xl-3 services__item" id="deep-cleaning" data-category="home">
+            <article class="service-card position-relative">
               <div class="service-card__photo service-card__photo--living-room"><span>02 / обновление</span></div>
               <div class="service-card__body">
                 <div class="d-flex justify-content-between align-items-start">
@@ -83,13 +93,13 @@
                   <li>Плинтусы и двери</li>
                   <li>Фасады и бытовая техника</li>
                 </ul>
-                <div class="service-card__price-row"><span>от <b>6 900 ₽</b></span><button
-                    class="text-link service-card__order" data-service="Генеральная уборка">Заказать →</button></div>
+                <div class="service-card__price-row"><span>от <b>6 900 ₽</b></span><button class="text-link stretched-link" type="button" data-bs-toggle="modal" data-bs-target="#serviceDetails" aria-label="Подробнее: Генеральная уборка" data-description="Подходит, если обычной уборки уже недостаточно. Помимо основных поверхностей уделим внимание дверям, плинтусам и фасадам. Объём очистки бытовой техники уточним при заказе.">Подробнее →</button><button
+                    class="text-link service-card__order position-relative z-1" data-service="Генеральная уборка">Заказать →</button></div>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-lg-4 services__item" id="post-renovation-cleaning" data-category="special">
-            <article class="service-card">
+          <div class="col-md-6 col-lg-4 col-xl-3 services__item" id="post-renovation-cleaning" data-category="special">
+            <article class="service-card position-relative">
               <div class="service-card__photo service-card__photo--renovation"><span>03 / новый этап</span></div>
               <div class="service-card__body">
                 <div class="d-flex justify-content-between align-items-start">
@@ -101,13 +111,13 @@
                   <li>Окна и поверхности</li>
                   <li>Детальная уборка пола</li>
                 </ul>
-                <div class="service-card__price-row"><span>от <b>9 900 ₽</b></span><button
-                    class="text-link service-card__order" data-service="Уборка после ремонта">Заказать →</button></div>
+                <div class="service-card__price-row"><span>от <b>9 900 ₽</b></span><button class="text-link stretched-link" type="button" data-bs-toggle="modal" data-bs-target="#serviceDetails" aria-label="Подробнее: Уборка после ремонта" data-description="Подходит после завершения строительных работ. Сообщите заранее, если остались следы краски, клея или других материалов, чтобы согласовать объём уборки.">Подробнее →</button><button
+                    class="text-link service-card__order position-relative z-1" data-service="Уборка после ремонта">Заказать →</button></div>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-lg-4 services__item" data-category="home">
-            <article class="service-card">
+          <div class="col-md-6 col-lg-4 col-xl-3 services__item" data-category="home">
+            <article class="service-card position-relative">
               <div class="service-card__photo service-card__photo--house"><span>04 / переезд</span></div>
               <div class="service-card__body">
                 <div class="d-flex justify-content-between align-items-start">
@@ -119,13 +129,13 @@
                   <li>Кухня, санузлы, лестницы</li>
                   <li>Пыль, полы и зеркала</li>
                 </ul>
-                <div class="service-card__price-row"><span>от <b>7 900 ₽</b></span><button
-                    class="text-link service-card__order" data-service="Уборка дома">Заказать →</button></div>
+                <div class="service-card__price-row"><span>от <b>7 900 ₽</b></span><button class="text-link stretched-link" type="button" data-bs-toggle="modal" data-bs-target="#serviceDetails" aria-label="Подробнее: Уборка дома" data-description="При расчёте учитываем площадь дома, число этажей и санузлов. Укажите, нужно ли убирать лестницы и общие зоны.">Подробнее →</button><button
+                    class="text-link service-card__order position-relative z-1" data-service="Уборка дома">Заказать →</button></div>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-lg-4 services__item" data-category="office">
-            <article class="service-card">
+          <div class="col-md-6 col-lg-4 col-xl-3 services__item" data-category="office">
+            <article class="service-card position-relative">
               <div class="service-card__photo service-card__photo--office"><span>05 / для команды</span></div>
               <div class="service-card__body">
                 <div class="d-flex justify-content-between align-items-start">
@@ -137,13 +147,13 @@
                   <li>Кухня и санузел</li>
                   <li>Вынос мусора и полы</li>
                 </ul>
-                <div class="service-card__price-row"><span>от <b>4 900 ₽</b></span><button
-                    class="text-link service-card__order" data-service="Уборка офиса">Заказать →</button></div>
+                <div class="service-card__price-row"><span>от <b>4 900 ₽</b></span><button class="text-link stretched-link" type="button" data-bs-toggle="modal" data-bs-target="#serviceDetails" aria-label="Подробнее: Уборка офиса" data-description="Подходит для рабочих кабинетов и переговорных. При заказе можно согласовать время визита с графиком офиса и уточнить, какие зоны требуют уборки.">Подробнее →</button><button
+                    class="text-link service-card__order position-relative z-1" data-service="Уборка офиса">Заказать →</button></div>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-lg-4 services__item" id="apartment-cleaning" data-category="home">
-            <article class="service-card">
+          <div class="col-md-6 col-lg-4 col-xl-3 services__item" id="apartment-cleaning" data-category="home">
+            <article class="service-card position-relative">
               <div class="service-card__photo service-card__photo--apartment"><span>06 / быстро и легко</span></div>
               <div class="service-card__body">
                 <div class="d-flex justify-content-between align-items-start">
@@ -155,14 +165,101 @@
                   <li>Ванная и туалет</li>
                   <li>Пылесос и влажная уборка</li>
                 </ul>
-                <div class="service-card__price-row"><span>от <b>3 500 ₽</b></span><button
-                    class="text-link service-card__order" data-service="Уборка квартиры">Заказать →</button></div>
+                <div class="service-card__price-row"><span>от <b>3 500 ₽</b></span><button class="text-link stretched-link" type="button" data-bs-toggle="modal" data-bs-target="#serviceDetails" aria-label="Подробнее: Уборка квартиры" data-description="Подходит для уборки комнат, кухни и санузлов в квартире. Для расчёта укажите общую площадь и перечислите зоны, которым нужно уделить особое внимание.">Подробнее →</button><button
+                    class="text-link service-card__order position-relative z-1" data-service="Уборка квартиры">Заказать →</button></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3 services__item" id="move-cleaning" data-category="home">
+            <article class="service-card position-relative">
+              <img class="service-card__photo w-100 object-fit-cover" src="works-renovation.jpg" loading="lazy" alt="">
+              <div class="service-card__body">
+                <h3>Уборка перед переездом</h3>
+                <p>Подготовим пустое помещение к заселению.</p>
+                <ul>
+                  <li>Полы и плинтусы</li>
+                  <li>Кухня и санузлы</li>
+                  <li>Внутренние поверхности пустых шкафов</li>
+                </ul>
+                <div class="service-card__price-row"><span>от <b>5 900 ₽</b></span><button class="text-link stretched-link" type="button" data-bs-toggle="modal" data-bs-target="#serviceDetails" aria-label="Подробнее: Уборка перед переездом" data-description="Подходит для пустого помещения перед заселением. Сообщите, какие шкафы будут освобождены к визиту, чтобы согласовать уборку внутренних поверхностей.">Подробнее →</button>
+                  <button type="button" class="text-link service-card__order position-relative z-1" data-service="Уборка перед переездом">Заказать →</button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3 services__item" id="commercial-cleaning" data-category="office">
+            <article class="service-card position-relative">
+              <img class="service-card__photo w-100 object-fit-cover" src="works-office.jpg" loading="lazy" alt="">
+              <div class="service-card__body">
+                <h3>Уборка коммерческих помещений</h3>
+                <p>Уберём торговые залы и общие зоны.</p>
+                <ul>
+                  <li>Полы и входная зона</li>
+                  <li>Доступные поверхности</li>
+                  <li>Вынос мусора</li>
+                </ul>
+                <div class="service-card__price-row"><span>от <b>6 900 ₽</b></span><button class="text-link stretched-link" type="button" data-bs-toggle="modal" data-bs-target="#serviceDetails" aria-label="Подробнее: Уборка коммерческих помещений" data-description="Подходит для торговых залов, входных групп и общих зон. Для расчёта уточним тип покрытия пола, площадь и удобное время визита.">Подробнее →</button>
+                  <button type="button" class="text-link service-card__order position-relative z-1" data-service="Уборка коммерческих помещений">Заказать →</button>
+                </div>
               </div>
             </article>
           </div>
         </div>
         <p class="services__note">* Итоговая стоимость зависит от площади и состояния помещения. Точную цену уточнит
           менеджер.</p>
+      </div>
+    </section>
+    <section class="section--padded section--compact" id="serviceComparison" aria-labelledby="serviceComparisonTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="serviceComparisonTitle">Сравнение видов уборки</h2>
+        </div>
+        <div class="table-responsive" role="region" aria-labelledby="serviceComparisonTitle" tabindex="0">
+          <table class="table table-bordered service-comparison align-middle mb-0">
+            <thead>
+              <tr><th scope="col">Что сравниваем</th><th scope="col">Поддерживающая</th><th scope="col">Генеральная</th><th scope="col">После ремонта</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Когда подходит</th><td>Для регулярного ухода</td><td>Для тщательной уборки</td><td>После строительных работ</td></tr>
+              <tr><th scope="row">Полы и поверхности</th><td>Влажная уборка и удаление пыли</td><td>Всё из поддерживающей уборки</td><td>Очистка пола и поверхностей от строительной пыли</td></tr>
+              <tr><th scope="row">Основной объём работ</th><td>Кухня, санузел, полы и зеркала</td><td>Дополнительно плинтусы, двери, фасады и бытовая техника</td><td>Окна, поверхности и следы ремонта</td></tr>
+              <tr><th scope="row">Начальная стоимость</th><td>от 2 900 ₽</td><td>от 6 900 ₽</td><td>от 9 900 ₽</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="comparison section--padded section--compact" id="calculator" aria-labelledby="calculatorTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="calculatorTitle">Калькулятор <em>уборки</em></h2>
+          <p>Рассчитайте ориентировочную стоимость по площади помещения.</p>
+        </div>
+        <form id="priceCalculator" class="row g-3 align-items-end">
+          <div class="col-md-5">
+            <label class="form-label" for="calcService">Услуга</label>
+            <select id="calcService" class="form-select mb-0">
+              <option value="Поддерживающая уборка" data-min="2900" data-rate="60">Поддерживающая уборка</option>
+              <option value="Генеральная уборка" data-min="6900" data-rate="120">Генеральная уборка</option>
+              <option value="Уборка после ремонта" data-min="9900" data-rate="160">Уборка после ремонта</option>
+              <option value="Уборка дома" data-min="7900" data-rate="105">Уборка дома</option>
+              <option value="Уборка офиса" data-min="4900" data-rate="80">Уборка офиса</option>
+              <option value="Уборка квартиры" data-min="3500" data-rate="70">Уборка квартиры</option>
+              <option value="Уборка перед переездом" data-min="5900" data-rate="105">Уборка перед переездом</option>
+              <option value="Уборка коммерческих помещений" data-min="6900" data-rate="100">Уборка коммерческих помещений</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label" for="calcArea">Площадь, м²</label>
+            <input id="calcArea" class="form-control mb-0" type="number" min="1" max="10000" value="50" required>
+          </div>
+          <div class="col-md-4">
+            <button class="btn button--accent" type="submit">Перейти к заявке</button>
+          </div>
+          <div class="col-12">
+            <output class="fw-bold" id="calcTotal" for="calcService calcArea" aria-live="polite"></output>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -175,7 +272,7 @@
         </div>
         <div class="col-md-4 text-md-center">
           <nav class="d-flex flex-wrap gap-3 align-items-center justify-content-md-center footer__heading" aria-label="Навигация в подвале">
-            <a href="index.html">Главная</a><a href="services.html">Услуги и цены</a><a href="about.html">О компании</a>
+            <a href="index.html">Главная</a><a href="services.html">Услуги и цены</a><a href="about.html">О компании</a><a href="works.html">Наши работы</a>
           </nav>
         </div>
         <div class="col-md-4 d-md-flex justify-content-md-end">
@@ -195,8 +292,28 @@
     </div>
   </footer>
   <a class="back-to-top" hidden href="#top" aria-label="Наверх" title="Наверх"><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
+  <div class="modal fade" id="serviceDetails" tabindex="-1" aria-labelledby="serviceDetailsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="serviceDetailsTitle"></h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p id="serviceDetailsDescription"></p>
+          <h3 class="h6">Что входит в уборку</h3>
+          <ul id="serviceDetailsList"></ul>
+          <p class="fw-bold mb-1" id="serviceDetailsPrice"></p>
+          <p class="small mb-0">Итоговая цена зависит от площади и состояния помещения.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn button--accent w-100" id="serviceDetailsOrder" type="button">Заказать уборку</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content order-modal">
         <div class="modal-header">
           <div><span class="eyebrow">Это займёт минуту</span>
@@ -207,9 +324,9 @@
           <div class="modal-body">
             <div class="row g-3">
               <div class="col-12"><label class="form-label" for="orderName">Ваше имя</label><input class="form-control"
-                  id="orderName" name="name" placeholder="Как к вам обращаться?" required></div>
+                  id="orderName" autocomplete="name" name="name" placeholder="Как к вам обращаться?" required></div>
               <div class="col-12"><label class="form-label" for="orderPhone">Телефон</label><input class="form-control"
-                  id="orderPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required></div>
+                  id="orderPhone" autocomplete="tel" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required></div>
               <div class="col-md-7"><label class="form-label" for="orderService">Вид уборки</label><select
                   class="form-select" id="orderService" name="service" required>
                   <option value="" selected disabled>Выберите услугу</option>
@@ -219,6 +336,8 @@
                   <option>Генеральная уборка</option>
                   <option>Уборка после ремонта</option>
                   <option>Поддерживающая уборка</option>
+                  <option>Уборка перед переездом</option>
+                  <option>Уборка коммерческих помещений</option>
                 </select></div>
               <div class="col-md-5"><label class="form-label" for="orderArea">Площадь, м²</label><input
                   class="form-control" id="orderArea" name="area" type="number" min="1" placeholder="Например, 60"

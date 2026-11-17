@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Профессиональная уборка квартир, домов и офисов. Чисто, бережно, в удобное время.">
   <title>Чистый лад — клининговая компания</title>
+  <script src="theme.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,16 +15,21 @@
 </head>
 
 <body id="top">
-  <nav class="navbar navbar-expand-lg sticky-top header">
+  <a class="skip-link visually-hidden-focusable" href="#mainContent">К основному содержанию</a>
+  <nav class="navbar navbar-expand-xl sticky-top header">
     <div class="container"><a class="navbar-brand brand" href="#home"><span class="brand__mark" aria-hidden="true"></span>Чистый лад</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+      <button class="theme-toggle ms-auto me-2 ms-xl-3 me-xl-0 order-xl-last" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему">
+        <span class="theme-toggle__moon" aria-hidden="true">☾</span><span class="theme-toggle__sun" aria-hidden="true">☀︎</span>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+        aria-label="Главное меню"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link header__link" href="#home">Главная</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="#home" aria-current="page">Главная</a></li>
           <li class="nav-item"><a class="nav-link header__link" href="services.html">Услуги и цены</a></li>
           <li class="nav-item"><a class="nav-link header__link" href="about.html">О компании</a></li>
-          <li class="nav-item"><a class="nav-link header__link" href="contacts.html">Контакты</a></li>
+          <li class="nav-item"><a class="nav-link header__link" href="works.html">Наши работы</a></li>
+        <li class="nav-item"><a class="nav-link header__link" href="contacts.html">Контакты</a></li>
         </ul>
         <div class="header__call"><a href="tel:+74951234567">+7 (495) 123-45-67</a><small>Ежедневно, 8:00–22:00</small>
         </div><button class="btn button--dark header__order" data-bs-toggle="modal"
@@ -32,7 +38,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="mainContent" tabindex="-1">
     <section class="hero" id="home">
       <div class="container">
         <div class="row align-items-center g-5">
@@ -133,14 +139,17 @@
           <p>Одна и та же кухня до и после генеральной уборки.</p>
         </div>
         <figure class="comparison__figure mx-auto mb-0">
-          <div class="row g-0 text-center mb-2 fw-semibold" aria-hidden="true">
-            <span class="col-6">До уборки</span>
-            <span class="col-6">После уборки</span>
-          </div>
-          <img class="img-fluid rounded" src="kitchen-cleaning-before-after.jpg" width="1774" height="887" loading="lazy"
-            alt="Одна и та же кухня целиком: слева грязная посуда, пятна и мусор, справа чистые поверхности и пол">
-          <figcaption class="comparison__note">Иллюстрация создана с помощью ИИ.</figcaption>
+        <div class="comparison-slider rounded">
+  <div class="comparison-slider__before" aria-hidden="true"></div>
+  <span class="comparison-slider__divider" aria-hidden="true"><span>‹ ›</span></span>
+  <input class="comparison-slider__range" type="range" min="0" max="100" value="50"
+    aria-label="Сравнить кухню до и после уборки">
+</div>
+        <div class="d-flex justify-content-between"><span>До уборки</span><span>После уборки</span>
+        </div>
+        <figcaption class="comparison__note">Иллюстрация создана с помощью ИИ.</figcaption>
         </figure>
+        <a class="text-link d-inline-block mt-3" href="works.html">Все примеры работ →</a>
       </div>
     </section>
 
@@ -149,9 +158,10 @@
         <div class="section-heading">
           <h2 id="homeReviewsTitle">Отзывы клиентов</h2>
         </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <article class="review-card">
+        <div id="homeReviews" class="carousel slide">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+        <article class="review-card">
                     <div class="review-card__stars">★★★★★</div>
                     <p>«Очень приятные девушки, всё сделали аккуратно и быстро. После уборки дома пахнет
                         свежестью, а не химией. Обязательно позову снова!»</p>
@@ -159,20 +169,18 @@
                         <div><strong>Наталья К.</strong><small>Генеральная уборка</small></div>
                         <time>12.10.2026</time>
                     </div>
-                </article>
-            </div>
-            <div class="col-md-4">
-                <article class="review-card">
+                </article></div>
+<div class="carousel-item">
+<article class="review-card">
                     <div class="review-card__stars">★★★★★</div>
                     <p>«Заказали уборку после ремонта — результат просто отличный. Отмыли окна и всю пыль, даже
                         в шкафах. Цена совпала с той, что назвали заранее.»</p>
                     <div class="review-card__person"><span>И</span>
                         <div><strong>Илья М.</strong><small>После ремонта</small></div><time>04.10.2026</time>
                     </div>
-                </article>
-            </div>
-            <div class="col-md-4">
-                <article class="review-card">
+                </article></div>
+<div class="carousel-item">
+<article class="review-card">
                     <div class="review-card__stars">★★★★★</div>
                     <p>«Теперь заказываю поддерживающую уборку раз в неделю. Очень удобно, что можно выбрать
                         время, а дома всегда порядок. Спасибо команде!»</p>
@@ -181,8 +189,13 @@
                         <time>28.09.2026</time>
                     </div>
                 </article>
-            </div>
-        </div>
+                </div>
+                </div>
+                <div class="d-flex gap-2 justify-content-center mt-3">
+                <button class="btn btn-outline-secondary" type="button" data-bs-target="#homeReviews" data-bs-slide="prev" aria-label="Предыдущий отзыв">←</button>
+                <button class="btn btn-outline-secondary" type="button" data-bs-target="#homeReviews" data-bs-slide="next" aria-label="Следующий отзыв">→</button>
+                </div>
+                </div>
       </div>
     </section>
   </main>
@@ -195,7 +208,7 @@
         </div>
         <div class="col-md-4 text-md-center">
           <nav class="d-flex flex-wrap gap-3 align-items-center justify-content-md-center footer__heading" aria-label="Навигация в подвале">
-            <a href="#top">Главная</a><a href="services.html">Услуги и цены</a><a href="about.html">О компании</a>
+            <a href="#top">Главная</a><a href="services.html">Услуги и цены</a><a href="about.html">О компании</a><a href="works.html">Наши работы</a>
           </nav>
         </div>
         <div class="col-md-4 d-md-flex justify-content-md-end">
@@ -217,7 +230,7 @@
   <a class="back-to-top" hidden href="#top" aria-label="Наверх" title="Наверх"><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
 
   <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content order-modal">
         <div class="modal-header">
           <div><span class="eyebrow">Это займёт минуту</span>
@@ -228,9 +241,9 @@
           <div class="modal-body">
             <div class="row g-3">
               <div class="col-12"><label class="form-label" for="orderName">Ваше имя</label><input class="form-control"
-                  id="orderName" name="name" placeholder="Как к вам обращаться?" required></div>
+                  id="orderName" autocomplete="name" name="name" placeholder="Как к вам обращаться?" required></div>
               <div class="col-12"><label class="form-label" for="orderPhone">Телефон</label><input class="form-control"
-                  id="orderPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required></div>
+                  id="orderPhone" autocomplete="tel" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required></div>
               <div class="col-md-7"><label class="form-label" for="orderService">Вид уборки</label><select
                   class="form-select" id="orderService" name="service" required>
                   <option value="" selected disabled>Выберите услугу</option>
@@ -240,6 +253,8 @@
                   <option>Генеральная уборка</option>
                   <option>Уборка после ремонта</option>
                   <option>Поддерживающая уборка</option>
+                  <option>Уборка перед переездом</option>
+                  <option>Уборка коммерческих помещений</option>
                 </select></div>
               <div class="col-md-5"><label class="form-label" for="orderArea">Площадь, м²</label><input
                   class="form-control" id="orderArea" name="area" type="number" min="1" placeholder="Например, 60"
